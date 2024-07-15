@@ -1,0 +1,39 @@
+.SignUpPageContainer{
+    padding: 3rem;
+    /* width: 50%; */
+    width: fit-content;
+    font-size: 1.5rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    >div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0;
+        >input{
+            font-size: 2rem;
+            border: none;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+        input:focus {
+            outline: none;
+        }
+        >button{
+            padding: 1rem;
+            font-size: 1.5rem;
+            border-radius: 4rem;
+            border: none;
+            cursor: pointer;
+            background-color: rgb(212,175,122);
+            color: white;
+            &:hover{
+                background-color: green;
+                color: white;
+            }
+        }
+
+    }
+}

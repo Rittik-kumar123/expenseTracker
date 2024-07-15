@@ -10,6 +10,9 @@
         width: 60%;
         background-color: rgb(102,102,102);
         display: flex;
+        >:first-child{
+            width: 80%;
+        }
         >:last-child{
             display: flex;
             flex-direction: column;
@@ -30,11 +33,14 @@
             }
         }
     }
+
     >.AuthPageSignUpWrapper{
         width: 60%;
         background-color: rgb(102,102,102);
         display: flex;
-        >:first-child{
+        >.first{
+            border-radius: 1rem;
+            width: 50%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -52,6 +58,10 @@
                 border: none;
                 cursor: pointer;
             }
+        }
+        >.second{
+            width: 80%;
+            background-color: white;
         }
     }
 }

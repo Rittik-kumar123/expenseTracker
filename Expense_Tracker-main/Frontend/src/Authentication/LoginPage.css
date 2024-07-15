@@ -13,10 +13,12 @@
         align-items: center;
         margin: 1rem 0;
         >input{
-            font-size: 2rem;
+            font-size: 1.2rem;
             border: none;
             border-bottom: 1px solid black;
             text-align: center;
+            width: 20rem;
+            margin: 0.3rem 0;
         }
         input:focus {
             outline: none;

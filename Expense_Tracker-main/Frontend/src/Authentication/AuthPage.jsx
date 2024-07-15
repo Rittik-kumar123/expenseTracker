@@ -22,13 +22,13 @@ const AuthPage = (props) => {
                 </div>
             ) : (
                 <div className="AuthPageSignUpWrapper">
-                    <div>
+                    <div className="first">
                         <h3>If you already has an account, just sign in.</h3>
                         <button onClick={(e)=>{
                             setPageState(prev => !prev);
                         }}>Sign In</button>
                     </div>
-                    <div>
+                    <div className="second">
                         <SignUpPage></SignUpPage>
                     </div>
                 </div>

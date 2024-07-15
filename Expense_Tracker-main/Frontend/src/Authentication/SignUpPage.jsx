@@ -1,7 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
 import './SignUpPage.css'
 
 const SignUpPage = (props) => {
+
+  const [userDetails , setUserDetails] = useState({Name : "" , Email : "" , Password : ""});
+
+  function submitHandler(e){
+    e.preventDefault();
+    console.log("userDetails are : " , userDetails);
+    
+  }
   return (
     <div>
       <div className="SignUpPageContainer">
@@ -9,19 +17,34 @@ const SignUpPage = (props) => {
         <h3>Create your Account</h3>
       </div>
       <div>
-        <label htmlFor="userName">UserName</label>
-        <input type="text" name="userName"></input>
+        <label htmlFor="Name">UserName</label>
+        <input name="Name" onChange={(e)=>{
+          setUserDetails((prev) => ({
+            ...prev,
+            [e.target.name]: e.target.value,
+          }));
+        }} type="text"></input>
       </div>
       <div>
-        <label htmlFor="userEmail">Email</label>
-        <input type="email" name="userEmail"></input>
+        <label htmlFor="Email">Email</label>
+        <input onChange={(e)=>{
+          setUserDetails((prev) => ({
+            ...prev,
+            [e.target.name]: e.target.value,
+          }));
+        }} type="email" name="Email"></input>
       </div>
       <div>
         <label htmlFor="Password">Password</label>
-        <input type="password" name="Password"></input>
+        <input onChange={(e)=>{
+          setUserDetails((prev) => ({
+            ...prev,
+            [e.target.name]: e.target.value,
+          }));
+        }} type="password" name="Password"></input>
       </div>
       <div>
-        <button>SIGN UP</button>
+        <button onClick={submitHandler}>SIGN UP</button>
       </div>
     </div>
     </div>

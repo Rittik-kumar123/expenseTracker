@@ -11,7 +11,8 @@ const UsesrSchema = new mongoose.Schema({
         type:String,
         required: true,
         maxLength:50,
-        trim:true
+        trim:true,
+        unique : true,
     },
     password:{
         type:String,

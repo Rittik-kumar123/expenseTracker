@@ -8,6 +8,7 @@ import Dashboard from './Components/Dashbard/Dashboard';
 import Income from './Components/Income/Income'
 import Expenses from './Components/Expenses/Expenses';
 import { useGlobalContext } from './context/globalContext';
+import AuthPage from './Authentication/AuthPage';
 
 function App() {
   const [active, setActive] = useState(1)
@@ -36,13 +37,15 @@ function App() {
 
   return (
     <AppStyled bg={bg} className="App">
-      {orbMemo}
+      {/* {orbMemo}
       <MainLayout>
         <Navigation active={active} setActive={setActive} />
         <main>
           {displayData()}
         </main>
-      </MainLayout>
+      </MainLayout> */}
+      <AuthPage></AuthPage>
+
     </AppStyled>
   );
 }

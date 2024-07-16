@@ -1,0 +1,67 @@
+.AuthPageContainer{
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    >.AuthPageLoginWrapper{
+        width: 60%;
+        background-color: rgb(102,102,102);
+        display: flex;
+        >:first-child{
+            width: 80%;
+        }
+        >:last-child{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            padding-top: 3rem;
+            padding-bottom: 10rem;
+            >h3{
+                color: white;
+            }
+            >button{
+                font-size: 1.2rem;
+                padding: 0.5rem;
+                border-radius: 5rem;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    >.AuthPageSignUpWrapper{
+        width: 60%;
+        background-color: rgb(102,102,102);
+        display: flex;
+        >.first{
+            border-radius: 1rem;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            padding-top: 3rem;
+            padding-bottom: 10rem;
+            >h3{
+                color: white;
+            }
+            >button{
+                font-size: 1.2rem;
+                padding: 0.5rem;
+                border-radius: 5rem;
+                border: none;
+                cursor: pointer;
+            }
+        }
+        >.second{
+            width: 80%;
+            background-color: white;
+        }
+    }
+}

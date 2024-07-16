@@ -1,15 +1,19 @@
 import React, { useState } from "react"
 import './SignUpPage.css'
+import axios from "axios";
 
 const SignUpPage = (props) => {
+  const BASE_URL = "http://localhost:5000/api/v1/";
 
   const [userDetails , setUserDetails] = useState({Name : "" , Email : "" , Password : ""});
 
-  function submitHandler(e){
+  const  submitHandler = async (e)=>{
     e.preventDefault();
     console.log("userDetails are : " , userDetails);
-    
+    const response = await axios.post(`${BASE_URL}register` , userDetails);
+    console.log("the response from backend : " , response);
   }
+  
   return (
     <div>
       <div className="SignUpPageContainer">

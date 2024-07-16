@@ -3,16 +3,17 @@ import LoginPage from "./LoginPage";
 import SignUpPage from "./SignUpPage";
 import './AuthPage.css';
 
-const AuthPage = (props) => {
+const AuthPage = ({loginSetter}) => {
 
     const [pageState , setPageState] = useState(true);
+    
 
   return (
     <div className="AuthPageContainer">
         {
             pageState ? (
                 <div className="AuthPageLoginWrapper">
-                    <LoginPage></LoginPage>
+                    <LoginPage loginSetter={loginSetter}></LoginPage>
                     <div>
                         <h3>Don't have an account? Please Sign up!</h3>
                         <button onClick={(e)=>{

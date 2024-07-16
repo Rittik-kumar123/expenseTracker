@@ -11,7 +11,8 @@ import { useGlobalContext } from './context/globalContext';
 import AuthPage from './Authentication/AuthPage';
 
 function App() {
-  const [active, setActive] = useState(1)
+  const [active, setActive] = useState(1);
+  const [isLoggedIn , setIsLoggedIn] = useState(false);
 
   const global = useGlobalContext()
   console.log(global);
@@ -37,15 +38,22 @@ function App() {
 
   return (
     <AppStyled bg={bg} className="App">
-      {/* {orbMemo}
-      <MainLayout>
-        <Navigation active={active} setActive={setActive} />
-        <main>
-          {displayData()}
-        </main>
-      </MainLayout> */}
-      <AuthPage></AuthPage>
+    {
+      isLoggedIn ? (
+        <div>
+          {orbMemo}
+          <MainLayout>
+            <Navigation active={active} setActive={setActive} />
+            <main>
+              {displayData()}
+            </main>
+          </MainLayout>
+        </div>
 
+      ) : (
+        <AuthPage loginSetter={setIsLoggedIn}></AuthPage>
+      )
+    }
     </AppStyled>
   );
 }

@@ -1,9 +1,11 @@
 import React, { useState } from "react"
 import "./LoginPage.css"
 import axios from "axios";
+import { useGlobalContext } from "../context/globalContext";
 
-const LoginPage = ({loginSetter}) => {
+const LoginPage = () => {
   const [userDetails , setUserDetails] = useState({Email : "" , Password : ""});
+  const global = useGlobalContext();
 
   const BASE_URL = "http://localhost:5000/api/v1/";
 
@@ -21,7 +23,7 @@ const LoginPage = ({loginSetter}) => {
       alert(response.data.message);
     }
     else{
-      loginSetter(response.data.result);
+      global.setIsLoggedIn(response.data.result);
       alert(response.data.message);
     }
   }

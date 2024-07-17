@@ -12,7 +12,6 @@ import AuthPage from './Authentication/AuthPage';
 
 function App() {
   const [active, setActive] = useState(1);
-  const [isLoggedIn , setIsLoggedIn] = useState(false);
 
   const global = useGlobalContext()
   console.log(global);
@@ -39,7 +38,7 @@ function App() {
   return (
     <AppStyled bg={bg} className="App">
     {
-      isLoggedIn ? (
+      global.isLoggedIn ? (
         <div>
           {orbMemo}
           <MainLayout>
@@ -51,7 +50,7 @@ function App() {
         </div>
 
       ) : (
-        <AuthPage loginSetter={setIsLoggedIn}></AuthPage>
+        <AuthPage></AuthPage>
       )
     }
     </AppStyled>

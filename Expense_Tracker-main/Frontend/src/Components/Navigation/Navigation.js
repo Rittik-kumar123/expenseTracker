@@ -3,8 +3,15 @@ import styled from 'styled-components'
 import avatar from '../../img/avatar.png'
 import { signout } from '../../utils/Icons'
 import { menuItems } from '../../utils/menuItems'
+import { useGlobalContext } from "../../context/globalContext"
 
 function Navigation({active, setActive}) {
+
+    const global = useGlobalContext();
+
+    const logoutHandler = () => {
+        global.setIsLoggedIn(false);
+    }
 
     return (
         <NavStyled>
@@ -26,12 +33,12 @@ function Navigation({active, setActive}) {
                         <span>{item.title}</span>
                     </li>
                 })}
+                <div className="bottom-nav">
+                    <li onClick={logoutHandler}>
+                        {signout} Sign Out
+                    </li>
+                </div>
             </ul>
-            {/* <div className="bottom-nav">
-                <li>
-                    {signout} Sign Out
-                </li>
-            </div> */}
         </NavStyled>
     )
 }

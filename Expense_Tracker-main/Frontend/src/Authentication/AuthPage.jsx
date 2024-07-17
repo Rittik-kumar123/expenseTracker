@@ -4,7 +4,6 @@ import SignUpPage from "./SignUpPage";
 import './AuthPage.css';
 
 const AuthPage = () => {
-
     const [pageState , setPageState] = useState(true);
     
 
@@ -13,7 +12,7 @@ const AuthPage = () => {
         {
             pageState ? (
                 <div className="AuthPageLoginWrapper">
-                    <LoginPage></LoginPage>
+                    <LoginPage loginSetter={loginSetter}></LoginPage>
                     <div>
                         <h3>Don't have an account? Please Sign up!</h3>
                         <button onClick={(e)=>{

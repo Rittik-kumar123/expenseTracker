@@ -4,6 +4,7 @@ import axios from "axios";
 import { useGlobalContext } from "../context/globalContext";
 
 const LoginPage = () => {
+
   const [userDetails , setUserDetails] = useState({Email : "" , Password : ""});
   const global = useGlobalContext();
 

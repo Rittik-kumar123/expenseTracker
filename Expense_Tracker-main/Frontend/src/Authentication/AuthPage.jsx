@@ -3,8 +3,7 @@ import LoginPage from "./LoginPage";
 import SignUpPage from "./SignUpPage";
 import './AuthPage.css';
 
-const AuthPage = ({loginSetter}) => {
-
+const AuthPage = () => {
     const [pageState , setPageState] = useState(true);
     
 

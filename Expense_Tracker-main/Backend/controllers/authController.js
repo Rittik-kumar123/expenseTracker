@@ -38,9 +38,6 @@ exports.RegisterUser = async (req,res) => {
     }
 }
 
-<<<<<<< master
-=======
->>>>>>> master
 exports.LoginUser = async (req,res) => {
     try {
 

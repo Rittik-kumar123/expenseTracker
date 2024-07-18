@@ -3,7 +3,7 @@ import './SignUpPage.css'
 import axios from "axios";
 
 const SignUpPage = (props) => {
-  const BASE_URL = "http://localhost:5000/api/v1/";
+  const BASE_URL = "https://expensetracker-r4so.onrender.com/api/v1/";
 
   const [userDetails , setUserDetails] = useState({Name : "" , Email : "" , Password : ""});
 

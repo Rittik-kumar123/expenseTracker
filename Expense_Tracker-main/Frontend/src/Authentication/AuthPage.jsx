@@ -12,7 +12,7 @@ const AuthPage = () => {
         {
             pageState ? (
                 <div className="AuthPageLoginWrapper">
-                    <LoginPage loginSetter={loginSetter}></LoginPage>
+                    <LoginPage></LoginPage>
                     <div>
                         <h3>Don't have an account? Please Sign up!</h3>
                         <button onClick={(e)=>{

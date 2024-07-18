@@ -8,7 +8,7 @@ const LoginPage = () => {
   const [userDetails , setUserDetails] = useState({Email : "" , Password : ""});
   const global = useGlobalContext();
 
-  const BASE_URL = "http://localhost:5000/api/v1/";
+  const BASE_URL = "https://expensetracker-r4so.onrender.com/api/v1/";
 
   const submitHandler = async(e) => {
     e.preventDefault();
